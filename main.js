@@ -14,6 +14,31 @@ const SimulationApp = (function () {
     function init() {
         _initWebWorker();
         _bindEvents();
+        _fetchMatches();
+    }
+
+    /**
+     * Busca os jogos reais e alimenta o frontend dinamicamente.
+     * @private
+     */
+    function _fetchMatches() {
+        fetch('matches.json')
+            .then(res => res.json())
+            .then(data => {
+                const matchList = document.querySelector('.match-list');
+                if (!matchList) return;
+                matchList.innerHTML = ''; 
+                data.forEach(match => {
+                    const card = document.createElement('div');
+                    card.className = 'match-card';
+                    card.innerHTML = `
+                        <span class="match-name">${match.home_team} vs ${match.away_team}</span>
+                        <button class="sim-btn glow-btn js-sim-btn" data-home="${match.home_team}" data-away="${match.away_team}">[SIMULAR COM MONTE CARLO]</button>
+                    `;
+                    matchList.appendChild(card);
+                });
+            })
+            .catch(err => console.error("Erro ao puxar matches.json:", err));
     }
 
     /**
