@@ -18,8 +18,7 @@ Esta página web que você está acessando roda uma demonstração pura em JavaS
 A assimetria das bancas gigantes deve acabar. Este laboratório aberto destrava a matemática de alto escalão para quem quer entender o "Moneyfast".
 
 Se a engenharia aplicada neste ambiente gerou fascínio ou lucro para você, **fortaleça o manifesto de forma cega:**
-- [GitHub Sponsors](#)
-- [Livepix](#)
-- [Monero (XMR) Wallet: 8b38E__0xxPzmPr=NaNKgYG$](#)
+- [GitHub Sponsors](https://github.com)
+- [Monero (XMR) Wallet: Em breve...]
 
 **LICENÇA MIT.** Uso livre, responsabilidade por conta própria.
