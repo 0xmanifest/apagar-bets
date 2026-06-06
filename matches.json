@@ -1,8 +1,6 @@
 [
-    { "home_team": "Flamengo", "away_team": "Palmeiras", "stadium": "Rio de Janeiro" },
-    { "home_team": "São Paulo", "away_team": "Corinthians", "stadium": "São Paulo" },
-    { "home_team": "Atlético-MG", "away_team": "Grêmio", "stadium": "Belo Horizonte" },
-    { "home_team": "Internacional", "away_team": "Cruzeiro", "stadium": "Porto Alegre" },
-    { "home_team": "Vitória", "away_team": "Vasco da Gama", "stadium": "Salvador" },
-    { "home_team": "Fluminense", "away_team": "RB Bragantino", "stadium": "Rio de Janeiro" }
+    { "home_team": "Brasil", "away_team": "Argentina", "stadium": "Nova York" },
+    { "home_team": "França", "away_team": "Inglaterra", "stadium": "Miami" },
+    { "home_team": "Espanha", "away_team": "Alemanha", "stadium": "Los Angeles" },
+    { "home_team": "Portugal", "away_team": "Holanda", "stadium": "Dallas" }
 ]
