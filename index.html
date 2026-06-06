@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manifest | Predictive Engine</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="top-bar glass">
+        <div class="wallet-tracker">
+            <span class="wallet-title">QUANTUM COUNTER:</span>
+            <span class="wallet-value glow-text">R$ 0,00</span>
+        </div>
+        <div class="funding-buttons">
+            <a href="#" class="btn-fund github">GitHub Sponsors</a>
+            <a href="#" class="btn-fund livepix">Livepix</a>
+            <a href="#" class="btn-fund monero">Monero</a>
+        </div>
+    </div>
+
+    <div class="split-container">
+        <!-- LADO ESQUERDO: O SIMULADOR -->
+        <div class="left-panel glass">
+            <h2>⚽ JOGOS DE ELITE (MERCADO PAGO)</h2>
+            <div class="match-list">
+                <div class="match-card">
+                    <span class="match-name">Flamengo vs Palmeiras</span>
+                    <button class="sim-btn glow-btn" onclick="runSimulation('Flamengo', 'Palmeiras')">[SIMULAR COM MONTE CARLO]</button>
+                </div>
+                <div class="match-card">
+                    <span class="match-name">São Paulo vs Corinthians</span>
+                    <button class="sim-btn glow-btn" onclick="runSimulation('São Paulo', 'Corinthians')">[SIMULAR COM MONTE CARLO]</button>
+                </div>
+                <div class="match-card">
+                    <span class="match-name">Atlético-MG vs Grêmio</span>
+                    <button class="sim-btn glow-btn" onclick="runSimulation('Atlético-MG', 'Grêmio')">[SIMULAR COM MONTE CARLO]</button>
+                </div>
+            </div>
+
+            <div class="results-box hidden" id="results_box">
+                <h3 id="res_title" style="color: #a78bfa; margin-bottom: 10px;">PROBABILIDADE CALCULADA</h3>
+                <h1 id="res_score" style="font-size: 3rem; margin-bottom: 20px;">- x -</h1>
+                
+                <div class="bars-container">
+                    <div class="bar-row">
+                        <label>Fadiga Logística (Altitude/Jetlag)</label>
+                        <div class="bar-bg"><div class="bar-fill physio" id="bar_physio" style="width: 0%"></div></div>
+                    </div>
+                    <div class="bar-row">
+                        <label>Fator Surpresa em Massa (NLP)</label>
+                        <div class="bar-bg"><div class="bar-fill bias" id="bar_bias" style="width: 0%"></div></div>
+                    </div>
+                </div>
+                
+                <div id="contrarian_alert" class="hidden alert-box">
+                    🚨 ZEBRA CONTRARIANA DETECTADA (EV+)
+                </div>
+            </div>
+        </div>
+
+        <!-- LADO DIREITO: O CÓDIGO VIVO -->
+        <div class="right-panel code-viewer">
+            <div class="window-header">
+                <div class="dots">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                </div>
+                <span class="title">engine.py (NumPy Vectorized)</span>
+            </div>
+            <pre><code id="code_block">
+<span class="comment"># PROJETO: Manifest Predictive Engine</span>
+<span class="comment"># ARQUITETURA: Dixon-Coles Bivariado + Monte Carlo</span>
+<span class="comment"># OPSEC: SALT_FALSO_123</span>
+
+import numpy as np
+
+def calculate_lambda(team, opponent):
+    base_attack = team['xG'] * 1.15
+    base_defense = opponent['xGA'] * 0.90
+    
+<span class="code-line" id="line-bias">    <span class="comment"># --- ALGORITMO DE SURPRESA EM MASSA ---</span>
+    if team.get('overconfidence_flag'): base_attack *= 0.95
+    if team.get('pressure_flag'): base_defense *= 1.10</span>
+
+<span class="code-line" id="line-montecarlo">    <span class="comment"># --- O MOTOR QUÂNTICO (10.000 Iteraçōes) ---</span>
+    matrix = np.random.poisson(base_attack, 10000)
+    return matrix.mean()</span>
+
+def apply_backward_feedback(error_loss):
+<span class="code-line" id="line-feedback">    <span class="comment"># Retropropagação de Erro em Tempo Real</span>
+    weights = optimize_genetic_algorithm(error_loss)
+    update_model(weights)</span>
+            </code></pre>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

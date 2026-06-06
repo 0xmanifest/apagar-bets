@@ -1,0 +1,5 @@
+vault.bin
+system_config.txt
+.env
+*.enc
+backend/
